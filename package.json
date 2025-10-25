@@ -1,0 +1,20 @@
+{
+  "name": "tamo_junto",
+  "version": "1.0.0",
+  "description": "App que incentiva a pratica do convivio social, e interação entre pessoas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaValk4/TAMO_JUNTO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaValk4/TAMO_JUNTO/issues"
+  },
+  "homepage": "https://github.com/CaValk4/TAMO_JUNTO#readme"
+}
