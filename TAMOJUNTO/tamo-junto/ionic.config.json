@@ -1,0 +1,7 @@
+{
+  "name": "TAMO JUNTO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
