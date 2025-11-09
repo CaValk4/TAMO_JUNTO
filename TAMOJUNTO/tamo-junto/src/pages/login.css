@@ -1,0 +1,13 @@
+ion-content {
+  --background: #ffffff; /* deixa o fundo branco */
+}
+
+ion-input {
+  --background: #f4f4f4;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+ion-button {
+  margin-top: 16px;
+}
