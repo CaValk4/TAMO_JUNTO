@@ -1,0 +1,85 @@
+*{
+	color: #fff;
+}
+
+
+/* NavBar Centralizada */
+ion-tab-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+ion-tab-bar ion-tab-button {
+	flex: 1 1 0;
+	max-width: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	--padding-start: 0;
+	--padding-end: 0;
+}
+
+ion-tab-bar ion-tab-button ion-icon {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Fallback*/
+ion-toolbar ion-title {
+	text-align: center;
+}
+
+/* --- Navbar bonitinha --- */
+ion-tab-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: 0 auto;
+	z-index: 9999;
+	max-width: 100%;
+	padding: 6px;
+	background: rgba(255,255,255,0.04);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+}
+
+/* Botões das tabs */
+ion-tab-bar ion-tab-button {
+	flex: 0 1 auto;
+	min-width: 64px;
+	padding: 6px 10px;
+	margin: 0 4px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+}
+
+/* Ícone */
+ion-tab-bar ion-tab-button ion-icon {
+	font-size: 5rem;
+	color: inherit;
+}
+
+/* Força contraste se necessário em dispositivos que suportem safe-area */
+ion-tab-bar {
+	padding-bottom: calc(6px + env(safe-area-inset-bottom));
+}
+
+/* Layout responsivo: em telas muito pequenas, permitir overflow scroll horizontal */
+@media (max-width: 380px) {
+	ion-tab-bar {
+		left: 8px;
+		right: 8px;
+	}
+	ion-tab-bar ion-tab-button {
+		padding: 6px 8px;
+	}
+}
