@@ -1,6 +1,6 @@
 import { IonPage, IonContent } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
-import './loginTab.css';
+import './css/loginTab.css';
 import DefaultButton from '../components/Buttons/DefaultButton';
 import loginImage from '../assets/images/loginTab/loginImage.png';
 import tamojuntoLogo1 from '../assets/images/loginTab/tamojuntologo_1.png';
@@ -21,8 +21,8 @@ const LoginTab: React.FC = () => {
           <div className="login-inner">
             <h2>Juntos, criamos momentos que valem mais que curtidas.</h2>
             <div className="button-row">
-              <DefaultButton label="ENTRAR" onClick={handleGoToCredentials} />
-              <DefaultButton label="CADASTRAR" />
+              <DefaultButton onClick={handleGoToCredentials}>ENTRAR</DefaultButton>
+              <DefaultButton>CADASTRAR</DefaultButton>
             </div>
           </div>
 

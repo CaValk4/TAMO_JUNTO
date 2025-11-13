@@ -1,22 +1,30 @@
-import React from "react";
-import styles from "./DefaultButton.module.css";
+import React, {ReactNode} from "react";
+import styles from "./css/DefaultButton.module.css";
 
 interface DefaultButtonProps {
-  label?: string;
+  children?: ReactNode;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "button" | "submit" | "reset";
 }
 
 function DefaultButton({
-  label = "Default Button",
+  children = "Default Button",
   className,
+  type = "button",
   ...rest
 }: DefaultButtonProps) {
+
+  //Lógica para tratar os estilos do botão.
   const cls = [styles.button, className].filter(Boolean).join(" ");
+
   return (
-    <button className={cls} {...rest}>
-      {label}
+    <button
+      type={type}
+      className={cls}
+      {...rest}
+    >
+      {children}
     </button>
   );
 }

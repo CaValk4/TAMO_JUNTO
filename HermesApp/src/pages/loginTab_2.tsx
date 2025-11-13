@@ -14,7 +14,7 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import { useHistory } from "react-router-dom";
-import "./loginTab_2.css";
+import "./css/loginTab_2.css";
 import DefaultButton from "../components/Buttons/DefaultButton";
 import tamojuntoLogo2 from "../assets/images/loginTab/tamojuntologo_2.png";
 import backIcon from "../assets/images/loginTab/backButton.svg";
@@ -118,7 +118,7 @@ const LoginTabCredentials: React.FC = () => {
           </IonButton>
 
           <div className="default-button">
-            <DefaultButton label="ENTRAR" onClick={handleSubmit} />
+            <DefaultButton onClick={handleSubmit}>ENTRAR</DefaultButton>
           </div>
 
           <div className="login-credentials-divider">

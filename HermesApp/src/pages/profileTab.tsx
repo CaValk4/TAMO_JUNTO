@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './profileTab.css';
+import './css/profileTab.css';
 
 const profileTab: React.FC = () => {
   return (
