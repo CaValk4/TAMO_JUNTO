@@ -1,51 +1,27 @@
-body {
-  font-family: 'Montserrat', sans-serif;
-  --ion-background-color: linear-gradient(180deg, #090023 32%, #0E0326 57%, #340B8C 100%);
-  margin: 0;
-  padding: 0;
-}
-
-/* Títulos */
-h1 {
-  font-family: 'Krona One', sans-serif;
-}
-
-body h2 {
-  text-align: center;
-  font-weight: 900;
-}
-
-/* Layout geral da tela de login */
-.login-content {
-  min-height: 100vh;
+/* Estilo do grid principal do login */
+.login-grid {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(180deg, #090023 32%, #0E0326 57%, #340B8C 100%);
-  color: #fff;
 }
 
+/* Estilo da seção interna do login */
 .login-inner {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-width: 720px;
 }
 
-/* Título */
+/* Estilo do título principal */
 .login-inner h2 {
   font-weight: 900;
   font-size: 2rem;
   margin: 0;
-  color: #7C5BA6;
+  color: #7c5ba6; /* Cor do título */
   padding: 0 1.5rem;
+  text-align: center;
 }
 
-/* Botões */
+/* Estilo dos botões (preservado) */
 .button-row {
   display: flex;
   flex-direction: column;
@@ -57,25 +33,27 @@ body h2 {
   margin: 1rem 0;
 }
 
+/* Estilo dos botões individuais */
 .button-row button {
   width: 70%;
   max-width: 320px;
   height: 2.8rem;
-  padding: 0 0.6rem;
 }
 
-/* Logo e ilustração: limitar altura para evitar overflow em telas pequenas */
+/* Estilos das imagens*/
 .logo-image {
   width: auto;
+  max-width: 180px;
   margin-top: 2vh;
 }
 
 .login-image {
   max-height: 28vh;
   width: auto;
+  max-width: 300px;
 }
 
-/* Rodapé */
+/* Estilo do rodapé */
 .login-footer {
   width: 100%;
   text-align: center;
@@ -85,11 +63,20 @@ body h2 {
   margin: 0;
 }
 
-/* Ajustes para telas pequenas / com pouca altura: reduzir fontes, imagens e botões para caber na tela sem scroll */
+/* Responsividade */
 @media (max-height: 700px), (max-width: 360px) {
-  .logo-image { max-height: 25vh; }
-  .login-image { max-height: 30vh; }
-  .login-inner h2 { font-size: 1.5rem; padding: 0 3rem; }
-  .button-row button { height: 2.8rem; width: 80%; }
-  .login-content { padding: 0rem 0; }
+  .logo-image {
+    max-height: 25vh;
+  }
+  .login-image {
+    max-height: 30vh;
+  }
+  .login-inner h2 {
+    font-size: 1.5rem;
+    padding: 0 3rem;
+  }
+  .button-row button {
+    height: 2.8rem;
+    width: 80%;
+  }
 }

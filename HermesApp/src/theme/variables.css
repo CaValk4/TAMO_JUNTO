@@ -1,7 +1,24 @@
-*{
-	color: #fff;
+body{
+	--ion-background-color: linear-gradient(
+	180deg,
+    #090023 32%,
+    #0e0326 57%,
+    #340b8c 100%
+	);
+
+	--ion-text-color: #ffffff;
+
+	font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+	font-family: 'Krona One', sans-serif;
+}
+
+h2 {
+	text-align: center;
+	font-weight: 900;
+}
 
 /* NavBar Centralizada */
 ion-tab-bar {
