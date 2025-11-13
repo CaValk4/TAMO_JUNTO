@@ -16,6 +16,7 @@ const LoginTab: React.FC = () => {
     <IonPage>
       <IonContent fullscreen scrollY={false} className="ion-padding">
         <IonGrid fixed className="login-grid">
+          
           {/* Seção do Logo */}
           <IonRow className="ion-justify-content-center ion-align-items-start">
             <IonCol
