@@ -20,83 +20,84 @@ h2 {
 	font-weight: 900;
 }
 
-/* NavBar Centralizada */
+
+/* * Estilos da Tab Bar (Barra de Navegação Inferior)
+ * Estilo "flutuante" com fundo blur.
+ */
 ion-tab-bar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-}
+  
+  /* Layout e Posição */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 9999;
+  max-width: 100%;
 
-ion-tab-bar ion-tab-button {
-	flex: 1 1 0;
-	max-width: none;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	--padding-start: 0;
-	--padding-end: 0;
-}
+  /* Estilo Visual (Blur "bonitinho") */
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 
-ion-tab-bar ion-tab-button ion-icon {
-	display: block;
-	margin: 0 auto;
-}
-
-/* Fallback*/
-ion-toolbar ion-title {
-	text-align: center;
-}
-
-/* --- Navbar bonitinha --- */
-ion-tab-bar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	margin: 0 auto;
-	z-index: 9999;
-	max-width: 100%;
-	padding: 6px;
-	background: rgba(255,255,255,0.04);
-	-webkit-backdrop-filter: blur(8px);
-	backdrop-filter: blur(8px);
+  /* * Padding consolidado:
+   * Define 6px para topo, esquerda e direita.
+   * Define o 'bottom' para 6px + o 'safe-area' do dispositivo.
+   */
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: calc(6px + env(safe-area-inset-bottom));
 }
 
 /* Botões das tabs */
 ion-tab-bar ion-tab-button {
-	flex: 0 1 auto;
-	min-width: 64px;
-	padding: 6px 10px;
-	margin: 0 4px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 4px;
+  /* * Esta é a regra principal do segundo bloco. 
+   * 'flex: 0 1 auto' impede que os botões cresçam.
+   */
+  flex: 0 1 auto;
+  min-width: 64px;
+  padding: 6px 10px;
+  margin: 0 4px;
+  
+  /* Layout interno do botão (ícone e label) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  
+  /* Removemos as variáveis --padding-start/end, pois o padding já foi definido */
 }
 
-/* Ícone */
+/* Ícone do botão da tab */
 ion-tab-bar ion-tab-button ion-icon {
-	font-size: 5rem;
-	color: inherit;
+  /* * NOTA: '5rem' (aprox. 80px) é muito grande. 
+   * Sugiro '2.5rem' (aprox. 40px) ou '3rem'. 
+   * Mantive '5rem' se for intencional.
+   */
+  font-size: 5rem; 
+  color: inherit;
+  /* As regras 'display: block' e 'margin: auto' do primeiro bloco são desnecessárias aqui, pois o 'align-items' do pai (ion-tab-button) já faz a centralização. */
 }
 
-/* Força contraste se necessário em dispositivos que suportem safe-area */
-ion-tab-bar {
-	padding-bottom: calc(6px + env(safe-area-inset-bottom));
-}
-
-/* Layout responsivo: em telas muito pequenas, permitir overflow scroll horizontal */
+/* Layout responsivo: telas pequenas */
 @media (max-width: 380px) {
-	ion-tab-bar {
-		left: 8px;
-		right: 8px;
-	}
-	ion-tab-bar ion-tab-button {
-		padding: 6px 8px;
-	}
+  ion-tab-bar {
+    /* Ajusta o 'left' e 'right' para dar um respiro em telas pequenas */
+    left: 8px;
+    right: 8px;
+  }
+  
+  ion-tab-bar ion-tab-button {
+    padding: 6px 8px; /* Reduz o padding horizontal dos botões */
+  }
+}
+
+/* Estilos Gerais / Fallbacks */
+ion-toolbar ion-title {
+  text-align: center;
 }
